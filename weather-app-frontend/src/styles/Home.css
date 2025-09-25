@@ -1,0 +1,79 @@
+/* Container styling */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(to right, #e9d5ff, #d8b4fe); /* purple gradient */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Heading */
+.home-container h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #5b21b6; /* dark purple */
+  margin-bottom: 1.5rem;
+}
+
+/* Subheading */
+.home-container p {
+  font-size: 1.125rem;
+  color: #4b5563; /* gray text */
+  margin-bottom: 2rem;
+}
+
+/* Buttons container */
+.home-container .button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Button base styling */
+.home-container .button-group a {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  display: inline-block;
+  transform: scale(1);
+}
+
+/* Hover effects */
+.home-container .button-group a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+/* Specific button colors */
+.home-container .login-btn {
+  background-color: #7c3aed; /* purple */
+}
+
+.home-container .login-btn:hover {
+  background-color: #6d28d9;
+}
+
+.home-container .register-btn {
+  background-color: #16a34a; /* green */
+}
+
+.home-container .register-btn:hover {
+  background-color: #15803d;
+}
+
+.home-container .about-btn {
+  background-color: #2563eb; /* blue */
+}
+
+.home-container .about-btn:hover {
+  background-color: #1d4ed8;
+}

@@ -1,0 +1,176 @@
+/* Dashboard Container */
+.dashboard-container {
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(to right, #fef9c3, #fde047); /* yellow gradient */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+  font-family: Arial, sans-serif;
+}
+
+/* Fade-in animation for the whole dashboard */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading */
+.dashboard-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #92400e; /* dark yellow/brown */
+  margin-bottom: 1.5rem;
+  animation: bounceIn 1.2s ease-in-out;
+}
+
+/* Bounce-in effect for heading */
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Input + Button Group */
+.dashboard-container .search-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Input Field */
+.dashboard-container .input {
+  padding: 0.6rem 1rem;
+  border: 1px solid #facc15;
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.dashboard-container .input:focus {
+  border-color: #eab308;
+  box-shadow: 0 0 10px rgba(234, 179, 8, 0.6);
+  transform: scale(1.03);
+}
+
+/* Button */
+.dashboard-container .btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #ca8a04;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.dashboard-container .btn:hover {
+  background-color: #a16207;
+  transform: scale(1.1) rotate(-1deg);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.dashboard-container .btn:active {
+  transform: scale(0.95);
+}
+
+/* Error Message */
+.dashboard-container .error {
+  color: #dc2626;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: shake 0.4s ease-in-out;
+}
+
+/* Shake animation for errors */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Weather Card */
+.dashboard-container .weather-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  width: 260px;
+  text-align: center;
+  animation: slideUp 0.8s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-container .weather-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 16px rgba(0,0,0,0.2);
+}
+
+/* Slide-up effect for weather card */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Weather info */
+.weather-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #374151;
+}
+.weather-card p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #4b5563;
+}
+/* Loading animation */
+.loading {
+  font-size: 1.1rem;
+  color: #92400e;
+  font-weight: bold;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+/* Top Buttons */
+.dashboard-container .top-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Logout button */
+.dashboard-container .logout-btn {
+  background-color: #dc2626; /* red */
+}
+.dashboard-container .logout-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* Alerts button */
+.dashboard-container .alerts-btn {
+  background-color: #2563eb; /* blue */
+}
+.dashboard-container .alerts-btn:hover {
+  background-color: #1d4ed8;
+}
+
