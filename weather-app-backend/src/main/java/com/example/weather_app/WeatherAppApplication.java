@@ -8,15 +8,13 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @SpringBootApplication
 public class WeatherAppApplication extends SpringBootServletInitializer {
 
-    // Needed for WAR deployment to external Tomcat
+    public static void main(String[] args) {
+        SpringApplication.run(WeatherAppApplication.class, args);
+    }
+
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         return builder.sources(WeatherAppApplication.class);
-    }
-
-    public static void main(String[] args) {
-        SpringApplication.run(WeatherAppApplication.class, args);
-        System.out.print("Hello world");
     }
 }
 
